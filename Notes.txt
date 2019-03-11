@@ -157,6 +157,7 @@ problems/limitations with plain-js ( your-code ) with browser-apis
         component-based UI arch 
         ------------------------
 
+
         1. w3c   ==> web-component spec  
 
         APIs
@@ -177,3 +178,159 @@ problems/limitations with plain-js ( your-code ) with browser-apis
         6. polymer.js
 
         ......
+
+
+
+
+
+        component based architecture
+        -----------------------------
+
+        in web-UI ,
+
+        what is component ?
+        -------------------
+
+        Independent UI-fragement in web-page
+        with single-responsibility
+
+
+        e.g
+
+        Box, Input,....
+
+       
+
+        is HTML element(s) follows component based arch ?  Yes
+
+
+        ==> HTML tag/element/component
+
+                i.e dom-element is individual component
+
+
+        ==> every html-tag/element/component
+        is an instance of HTMLXXXElement class
+
+        e.g
+
+        <div></div>  instanceof 'HTMLDivElement' class
+
+        i.e
+
+        HTMLDivElement      ==> HTML-component-class
+        <div></div>         ==> HTML-component-instance
+
+        HTMLInputElement    ==> HTML-component-class
+        <input/>            ==> HTML-component-instance
+
+
+         adv of component arch in web-ui
+         ------------------------------------        
+         ==> easy to nest multiple component(s) together
+             without any complexity/pollution
+
+
+         
+        -------------------------------------
+        html-component properties/attributes
+        -------------------------------------
+
+
+        div element
+
+                - id
+                - class
+                - innerHTML
+
+        input element
+
+                - id 
+                - class
+                - type 
+
+        ......         
+
+        
+        imp-note :
+        
+        => parent-component can create any child-component with properties 
+
+        i.e
+
+        immutable-value(s) given by parent-component to child-component 
+        while instantiating/re-rendering         
+
+
+
+
+        -------------------------------------
+        types of html-components
+        -------------------------------------
+
+
+        1. stateless components   e.g   <div>, <hr/>
+        2. statefull components   e.g   <input /> , <canvas> , <audio /> ...
+
+        imp-note :
+        
+          ==> when component's state changes, always will re-render
+
+
+                
+        -------------------------------------------------
+
+        in component based arch  
+                ==> uni-directional data-flow
+
+        parent --> child : data/props will go down
+        child  --> parent : action/event will come up
+
+
+        --------------------------------------------------
+
+
+        --------------------------------------------------
+
+        by default HTML/borwser-DOM, 
+        follows component based UI architecture
+
+        --------------------------------------------------
+
+
+
+        somtimes we need components like these   
+
+        - Product
+        - Review
+        - Login
+        - Cart
+        - XXX
+        - DatePicker
+        .....
+
+
+
+
+        --------------------------------
+        way-1: w3c   ==> web-component spec  
+        --------------------------------
+
+
+        APIs
+        -----
+                      - Template
+                      - Shadow DOM
+                      - Custom Elements
+
+
+
+
+        --------------------------------
+        way-2: using third party's js lb & F.Ws
+        --------------------------------
+        
+        to create custom components,
+        we use React.js. Angular,....
+        
+        

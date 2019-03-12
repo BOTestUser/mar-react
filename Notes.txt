@@ -334,3 +334,19 @@ problems/limitations with plain-js ( your-code ) with browser-apis
         we use React.js. Angular,....
         
         
+
+----------------------------------------------------------
+
+> npm i yarn -g  
+> npm i create-react-app -g  
+
+> create-react-app <app-name>
+
+> cd <app-name>
+
+> npm i bootstrap --save  | yarn add bootstrap
+
+> npm start | yarn start
+
+
+

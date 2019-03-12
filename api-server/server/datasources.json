@@ -1,0 +1,11 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mongo": {
+    "url": "mongodb://user:user123@ds113402.mlab.com:13402/products-catalog",
+    "name": "mongo",
+    "connector": "mongodb"
+  }
+}

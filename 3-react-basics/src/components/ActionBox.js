@@ -9,10 +9,14 @@ class ActionBox extends Component {
             totalCount: 0
         }
     }
-    incrementTotalCount() {
+    incrementTotalCount(e) {
         let { totalCount } = this.state;
-        totalCount += 1;
+        totalCount += e.value;
         this.setState({ totalCount })
+    }
+    renderActions() {
+        let numbers = [1, -2, 3, -4, 5, -6, 7, -8, 9, -10, 1, -2, 3, -4, 5, -6, 7, -8, 9, -10]
+        return numbers.map((n, idx) => <Action key={idx} value={n} onAction={e => this.incrementTotalCount(e)} />)
     }
     render() {
         let { totalCount } = this.state;
@@ -21,14 +25,12 @@ class ActionBox extends Component {
                 <div className="card-header">Action Box  : <span className="badge badge-warning">{totalCount}</span> </div>
                 <div className="card-body">
 
-                    <Action value={1} onAction={e => this.incrementTotalCount()} />
-                    <Action value={100} onAction={e => this.incrementTotalCount()} />
-                    <Action value={-1} onAction={e => this.incrementTotalCount()} />
-                    <Action value={-100} onAction={e => this.incrementTotalCount()} />
-                    <Action value={1} onAction={e => this.incrementTotalCount()} />
-                    <Action value={100} onAction={e => this.incrementTotalCount()} />
-                    <Action value={-1} onAction={e => this.incrementTotalCount()} />
-                    <Action value={-100} onAction={e => this.incrementTotalCount()} />
+                    {/* 
+                    <Action value={1} onAction={e => this.incrementTotalCount(e)} />
+                    <Action value={-1} onAction={e => this.incrementTotalCount(e)} /> 
+                    */}
+
+                    {this.renderActions()}
 
                     <div style={{ clear: 'both' }}>
                         <Summary value={totalCount} />

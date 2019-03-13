@@ -1,0 +1,58 @@
+
+
+
+
+-------------------------------------------
+step-1 : indentify UI appln's state/model
+-------------------------------------------
+
+
+e.g 
+
+    => online-shopping-ui
+
+        - products
+        - reviews
+        - cart
+        - user
+        ...
+
+
+
+-------------------------------------------
+step-2 : indentify action(s) which cause state change
+-------------------------------------------
+
+
+    - LOAD_PRODUCTS_SUCCESS
+    - LOAD_REVIEWS_SUCCESS
+    - ADD_NEW_REVIEW
+    - BUY
+    - CHECKOUT
+    - LOGIN
+    - LOGOUT
+
+
+
+-------------------------------------------
+step-3 : define action creators to create action(s)
+-------------------------------------------
+
+
+e.g
+
+ function loadProducts(type,size){
+     //....n/w call
+     return {type:'LOAD_PRODUCTS_SUCCESS',products}
+ }
+
+
+-------------------------------------------
+step-4 : define reducer(s) to process actions & combine as root reducer
+-------------------------------------------
+
+
+-------------------------------------------
+step-5 : create store with root reducer
+-------------------------------------------
+
